@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#BSUB -J SeqMergeSort
+#BSUB -P lab3
+#BSUB -W 00:30
+#BSUB -n 1
+#BSUB -oo output_seq_mergesort_%J.out
+#BSUB -eo error_seq_mergesort_%J.err
+
+ARRAY_SIZE=200000
+NUM_RUNS=100
+
+./run_seq_mergesort.sh $ARRAY_SIZE $NUM_RUNS
